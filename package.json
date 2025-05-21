@@ -1,16 +1,20 @@
 {
   "name": "bitget-proxy",
   "version": "1.0.0",
-  "description": "Bitget proxy server",
-  "main": "main.js",
+  "description": "Bitget proxy server for Vercel",
+  "main": "api/proxy.js",
   "scripts": {
-    "dev": "nodemon main.js"
+    "start": "node api/proxy.js",
+    "dev": "vercel dev"
   },
   "dependencies": {
     "express": "^4.18.2",
-    "http-proxy-middleware": "^2.0.9"
+    "http-proxy-middleware": "^2.0.6"
+  },
+  "engines": {
+    "node": "18.x"
   },
   "devDependencies": {
-    "nodemon": "^3.0.2"
+    "vercel": "^33.0.0"
   }
 }
