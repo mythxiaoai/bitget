@@ -3,7 +3,7 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 const path = require('path');
 
 const app = express();
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3000;
 
 // 静态文件服务
 app.use(express.static(path.join(__dirname, '../public')));
@@ -43,7 +43,7 @@ const proxyOptions = {
         proxyRes.headers['Access-Control-Allow-Headers'] = 'Content-Type, Authorization, Content-Length, X-Requested-With, X-API-KEY';
         proxyRes.headers['Access-Control-Allow-Credentials'] = 'true';
         proxyRes.headers['Access-Control-Max-Age'] = '86400'; // 24小时
-    }
+  }
 };
 
 // 设置代理
@@ -56,5 +56,5 @@ module.exports = app;
 if (require.main === module) {
     app.listen(port, () => {
         console.log(`代理服务器运行在 http://localhost:${port}`);
-    });
+  });
 } 
