@@ -14,7 +14,9 @@ const getContentType = (name: string) => {
 }
 
 const fileNameMap = {
-  '/': 'index.html'
+  '/': 'index.html',
+  '/v0/index.html': '/v0/index.html',
+  '/v1/index.html': '/v1/index.html'
 }
 
 async function handleRequest(request: Request): Promise<Response> {
