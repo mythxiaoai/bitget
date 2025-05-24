@@ -59,4 +59,4 @@ async function handleRequest(request: Request): Promise<Response> {
   });
 }
 
-serve(handleRequest);
+serve(handleRequest, { port: 80 });
