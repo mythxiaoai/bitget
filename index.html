@@ -2577,9 +2577,12 @@
             gtag('js', new Date())
             gtag('config', 'G-Z8Q93KHR0F')
         </script>
-        <script async defer type="text/javaScript" src="/cdnstatic/libs/gt4.v1.min.js"></script>
-        <script async defer type="text/javaScript" src="/portalx-static/thirdParty/appleid.auth.js"></script>
-        <script async defer type="text/javaScript" src="/portalx-static/thirdParty/telegram-widget.js"></script>
+        <!--谷歌分析可以后置-->
+        <script defer type="text/javaScript" src="/cdnstatic/libs/gt4.v1.min.js"></script>
+        <!--苹果授权可以后置-->
+        <script defer type="text/javaScript" src="/portalx-static/thirdParty/appleid.auth.js"></script>
+        <!--telegram可以后置-->
+        <script defer type="text/javaScript" src="/portalx-static/thirdParty/telegram-widget.js"></script>
         <script defer src="/cdnstatic/libs/react.v18.3.0.min.js"></script>
         <script defer src="/cdnstatic/libs/react-dom.v18.3.0.min.js"></script>
     </head>
@@ -4109,7 +4112,8 @@
                 window.__staticRouterHydrationData = JSON.parse("{\"loaderData\":{\"0\":null,\"0-0\":null},\"actionData\":null,\"errors\":null}");
             </script>
         </div>
-        <script>
+        <!--
+            <script>
             ;(function() {
                 const script = document.createElement('script')
                 script.type = 'module'
@@ -4118,6 +4122,7 @@
             }
             )()
         </script>
+        -->
         <script id="__BITGET_TRADE_FLAG__" type="application/json">
             {
                 "isSSR": true
